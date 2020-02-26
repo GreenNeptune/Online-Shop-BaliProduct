@@ -1,0 +1,9 @@
+
+[
+  {"id": 1, "title": "ear budss", "price": 30, "quantity": 1},
+  {"id": 2, "title": "rolex watch", "price": 249.99, "quantity": 1},
+  {"id": 3, "title": "fedora hat", "price": 26, "quantity": 4},
+  {"id": 4, "title": "floppy straw sun hat", "price": 26, "quantity": 4},
+  {"id": 5, "title": "gold fountain pen", "price": 830.00, "quantity": 3},
+  {"id": 6, "title": "silver fountain pen", "price": 640.80, "quantity": 2}
+]

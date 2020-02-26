@@ -1,0 +1,19 @@
+/* every utility do one thing and start with 'u'
+example: u-utility-name'*/ 
+
+.u-clickable{cursor: pointer !important;}
+.u-hide{
+  display: none!important;
+}
+
+.u-moblie-hide{
+  @media #{$break1}, #{$break2} {
+    display: none !important;
+  }
+}
+
+.u-desktop-hide{
+  @media #{$break3} {
+    display: none !important;
+  }
+}
