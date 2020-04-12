@@ -1,16 +1,20 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types'
 
 function Product({ title, price, quantity, img }) {
   return (
-    <div className="product_description">
+    <Fragment>
       <div className="product_img">
         <img src={img} alt="" />
       </div>
-      <p className="product_title">{title}</p>
-      <p className="product_price">{price}</p>
-      <p className="product_quantity">{quantity}</p>
-    </div>
+      <div className="product_description">
+
+        <p className="product_title">{title}</p>
+        <p className="product_price">{price}$</p>
+
+      </div>
+    </Fragment>
+
   );
 }
 
