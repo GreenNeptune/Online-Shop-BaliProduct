@@ -9,7 +9,7 @@ function Product({ title, price, quantity, img }) {
       </div>
       <p className="product_title">{title}</p>
       <p className="product_price">{price}</p>
-      <p className="product_quantity">{quantity}</p>$
+      <p className="product_quantity">{quantity}</p>
     </div>
   );
 }

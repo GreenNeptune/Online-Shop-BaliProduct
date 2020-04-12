@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Product from '../Product';
 
 ProductItem.propTypes = {
   product: PropTypes.shape({
@@ -8,10 +9,9 @@ ProductItem.propTypes = {
     quantity: PropTypes.number.isRequired,
     img: PropTypes.string.isRequired,
   }).isRequired,
-  addProduct: PropTypes.func.isRequired
 };
 
-function ProductItem({product,addProduct}) {
+function ProductItem({ product }) {
   return (
     <div className="product_wrapper">
       < Product
@@ -20,7 +20,7 @@ function ProductItem({product,addProduct}) {
         quantity={product.quantity}
         img={product.img}
       />
-      <button className="btn-product_add" onClick={addProduct} >Add To Cart</button>
+      <button className="btn-product_add">Add To Cart</button>
     </div>
   );
 }
