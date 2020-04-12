@@ -1,3 +1,5 @@
+@import '../config/breakpoints';
+
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
@@ -43,5 +45,11 @@
         color: var(--blue-light);
       }
     }
+  }
+}
+
+@media ($break1) {
+  .products {
+    grid-template-columns: 1fr;
   }
 }
