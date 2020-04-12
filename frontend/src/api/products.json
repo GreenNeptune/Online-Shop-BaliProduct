@@ -1,9 +1,44 @@
-
 [
-  {"id": 1, "title": "ear budss", "price": 30, "quantity": 1,"img": "https://cdn.pixabay.com/photo/2017/08/07/10/21/earphones-2602313_1280.jpg"},
-  {"id": 2, "title": "rolex watch", "price": 249.99, "quantity": 1,"img": "https://images.unsplash.com/photo-1563626451-b5b36e6e52fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80"},
-  {"id": 3, "title": "fedora hat", "price": 26, "quantity": 4,"img": "https://cdn.pixabay.com/photo/2019/04/18/16/07/fedora-4137364_1280.jpg"},
-  {"id": 4, "title": "floppy straw sun hat", "price": 26, "quantity": 4,"img": "https://images.unsplash.com/photo-1504509670428-2c66853fd9f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"},
-  {"id": 5, "title": "gold fountain pen", "price": 830.00, "quantity": 3,"img": "https://cdn.pixabay.com/photo/2017/03/21/20/17/leave-2163261_1280.jpg"},
-  {"id": 6, "title": "silver fountain pen", "price": 640.80, "quantity": 2,"img": "https://cdn.pixabay.com/photo/2017/05/08/04/24/filler-2294347_1280.jpg"}
+  {
+    "id": 1,
+    "title": "ear budss",
+    "price": 30,
+    "quantity": 1,
+    "img": "https://cdn.pixabay.com/photo/2017/08/07/10/21/earphones-2602313_1280.jpg"
+  },
+  {
+    "id": 2,
+    "title": "rolex watch",
+    "price": 249.99,
+    "quantity": 1,
+    "img": "https://images.unsplash.com/photo-1563626451-b5b36e6e52fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80"
+  },
+  {
+    "id": 3,
+    "title": "fedora hat",
+    "price": 26,
+    "quantity": 4,
+    "img": "https://cdn.pixabay.com/photo/2019/04/18/16/07/fedora-4137364_1280.jpg"
+  },
+  {
+    "id": 4,
+    "title": "floppy straw sun hat",
+    "price": 26,
+    "quantity": 4,
+    "img": "https://images.unsplash.com/photo-1504509670428-2c66853fd9f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+  },
+  {
+    "id": 5,
+    "title": "gold fountain pen",
+    "price": 830.0,
+    "quantity": 3,
+    "img": "https://cdn.pixabay.com/photo/2017/03/21/20/17/leave-2163261_1280.jpg"
+  },
+  {
+    "id": 6,
+    "title": "silver fountain pen",
+    "price": 640.8,
+    "quantity": 2,
+    "img": "https://cdn.pixabay.com/photo/2017/05/08/04/24/filler-2294347_1280.jpg"
+  }
 ]

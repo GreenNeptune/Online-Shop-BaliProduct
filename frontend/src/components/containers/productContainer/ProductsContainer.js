@@ -14,7 +14,7 @@ ProductsContainer.propTypes = {
 
 function ProductsContainer({ products }) {
   return (
-    <div className="products">
+    <div className="products container">
       {products.map(product => (<ProductItem key={product.id} product={product} />))}
     </div>
   );
