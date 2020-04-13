@@ -48,7 +48,7 @@
   }
 }
 
-@media ($break1) {
+@media #{$break1} {
   .products {
     grid-template-columns: 1fr;
   }
