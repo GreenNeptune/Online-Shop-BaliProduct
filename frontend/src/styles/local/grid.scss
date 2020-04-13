@@ -8,6 +8,9 @@
 
   .product_wrapper {
     text-transform: uppercase;
+    border-radius: 5%;
+    border: 2px solid black;
+    overflow: hidden;
 
     img {
       width: 100%;
@@ -18,25 +21,22 @@
       font-size: 20px;
       width: 100%;
       padding: 25rem 10rem;
-      border: 1px solid #e3a856d6;
+      border: 1px solid #ffe96ad6;
       margin-top: 2px;
-      background: white;
-      color: #e3a856d6;
+      background: hsla(197, 72%, 57%, 0.91);
+      color: white;
 
       transition: all 0.3s ease-in;
 
-      &:hover,
-      :active,
-      :focus {
-        background: #e3a856f0;
-        color: white;
+      &:active {
+        background: hsla(197, 72%, 25%, 0.91);
       }
     }
   }
   .product_description {
     display: flex;
     padding: 20px 0;
-    justify-content: space-between;
+    justify-content: space-around;
     .product {
       &_title {
         font-weight: 600;
