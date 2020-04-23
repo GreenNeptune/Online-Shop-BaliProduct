@@ -21,11 +21,9 @@
       font-size: 20px;
       width: 100%;
       padding: 25rem 10rem;
-      border: 1px solid #ffe96ad6;
       margin-top: 2px;
       background: hsla(197, 72%, 57%, 0.91);
       color: white;
-
       transition: all 0.3s ease-in;
 
       &:active {
@@ -37,9 +35,10 @@
     display: flex;
     padding: 20px 0;
     justify-content: space-around;
+    align-items: center;
+    font-weight: 600;
     .product {
       &_title {
-        font-weight: 600;
       }
       &_price {
         color: var(--blue-light);
@@ -51,5 +50,55 @@
 @media #{$break1} {
   .products {
     grid-template-columns: 1fr;
+  }
+}
+
+// nav
+.nav {
+  .nav-links-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: hsla(197, 72%, 57%, 0.91);
+    text-transform: uppercase;
+
+    -webkit-box-shadow: 1px 7px 12px 0px rgba(50, 53, 50, 0.47);
+    -moz-box-shadow: 1px 7px 12px 0px rgba(50, 53, 50, 0.47);
+    box-shadow: 1px 7px 12px 0px rgba(50, 53, 50, 0.47);
+    li {
+      padding: 20px;
+      font-size: 20rem;
+      font-family: 'Vollkorn', serif;
+
+      &:hover,
+      :active,
+      :focus {
+        cursor: pointer;
+      }
+    }
+
+    @media #{$break1} {
+      max-width: 100%;
+      flex-direction: column;
+    }
+  }
+
+  .logo {
+    border-radius: 8%;
+    @media #{$break1} {
+      width: 100%;
+    }
+  }
+
+  .nav-links-right {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    @media #{$break1} {
+      max-width: 100%;
+      flex-direction: column;
+    }
   }
 }

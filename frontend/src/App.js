@@ -11,10 +11,21 @@ function App() {
   return (
     <div className="App">
       <Provider store={store}>
+        <div className="nav">
+          <ul className="nav-links-left">
+            <li style={{ boxShadow: '0 2rem 8rem rgba(0, 0, 0, 0.15)' }}>BaliProduct</li>
+            <li className="logo">
+              <i className="fas fa-shopping-cart fa-3x"></i>
+
+            </li>
+
+          </ul>
+
+        </div>
         <ProductsContainer />
       </Provider>
 
-    </div>
+    </div >
   );
 }
 
