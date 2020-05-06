@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Product from '../Product';
+import { addProduct } from '../../redux_store/reducers/user/actions';
 
 ProductItem.propTypes = {
   product: PropTypes.shape({
@@ -11,7 +12,7 @@ ProductItem.propTypes = {
   }).isRequired,
 };
 
-function ProductItem({ product }) {
+function ProductItem({ product, addProduct }) {
   return (
     <div className="product_wrapper">
       < Product
@@ -20,7 +21,7 @@ function ProductItem({ product }) {
         quantity={product.quantity}
         img={product.img}
       />
-      <button className="btn-product_add">Add To Cart</button>
+      <button onClick={() => addProduct(product)} className="btn-product_add">Add To Cart</button>
     </div>
   );
 }

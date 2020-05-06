@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from "react-redux";
 import ProductItem from '../../ProductItem';
+import { addProduct } from '../../../redux_store/reducers/user/actions';
 
 ProductsContainer.propTypes = {
   products: PropTypes.arrayOf(PropTypes.shape({
@@ -12,18 +13,23 @@ ProductsContainer.propTypes = {
   })).isRequired,
 };
 
-function ProductsContainer({ products }) {
+function ProductsContainer({ products, addProduct }) {
   return (
     <div className="products container">
-      {products.map(product => (<ProductItem key={product.id} product={product} />))}
+      {products.map(product => (<ProductItem key={product.id} product={product} addProduct={addProduct} />))}
     </div>
   );
 }
 
 const mapStateToProps = (state) => ({
-  products: state.cart.products
+  products: state.cart.products,
 });
 
 
+const mapDispatchToProps = {
+  addProduct,
+}
 
-export default connect(mapStateToProps)(ProductsContainer);
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductsContainer);

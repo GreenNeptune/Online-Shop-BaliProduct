@@ -5,6 +5,7 @@ import ProductsContainer from './components/containers/productContainer/Products
 // Redux 
 import store from '../src/redux_store'
 import { Provider } from 'react-redux';
+import CartContainer from './components/containers/CartContainer';
 
 
 function App() {
@@ -16,15 +17,12 @@ function App() {
             <li style={{ boxShadow: '0 2rem 8rem rgba(0, 0, 0, 0.15)' }}>BaliProduct</li>
             <li className="logo">
               <i className="fas fa-shopping-cart fa-3x"></i>
-
             </li>
-
           </ul>
-
         </div>
+        <CartContainer />
         <ProductsContainer />
       </Provider>
-
     </div >
   );
 }
