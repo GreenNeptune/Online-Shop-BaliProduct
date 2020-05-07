@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Product from '../Product';
-import { addProduct } from '../../redux_store/reducers/user/actions';
 
 ProductItem.propTypes = {
   product: PropTypes.shape({

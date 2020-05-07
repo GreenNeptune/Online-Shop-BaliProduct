@@ -50,11 +50,13 @@
 @media #{$break1} {
   .products {
     grid-template-columns: 1fr;
+    padding: 20rem;
   }
 }
 
 // nav
 .nav {
+  box-shadow: 1px 7px 12px 0px rgba(50, 53, 50, 0.47);
   .nav-links-left {
     display: flex;
     justify-content: center;
@@ -63,9 +65,6 @@
     color: hsla(197, 72%, 57%, 0.91);
     text-transform: uppercase;
 
-    -webkit-box-shadow: 1px 7px 12px 0px rgba(50, 53, 50, 0.47);
-    -moz-box-shadow: 1px 7px 12px 0px rgba(50, 53, 50, 0.47);
-    box-shadow: 1px 7px 12px 0px rgba(50, 53, 50, 0.47);
     li {
       padding: 20px;
       font-size: 20rem;
