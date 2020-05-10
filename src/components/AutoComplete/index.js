@@ -11,10 +11,11 @@ export const AutoComplete = ({ products }) => {
     setText(value)
     setFilterProducts(filterByName);
   }
+  console.log(filterProducts);
   return (
     <div className='auto-complete'>
       <input value={text} onChange={onChange} type='text' placeholder='Search...' />
-      {!filterProducts.length === 0 && text ? (<ul className="dropdown">
+      {text && filterProducts.length !== 0 ? (<ul className="dropdown">
         {filterProducts.map((product, index) => <li key={index}>{product.title}</li>)}
       </ul>)
         : ""}
