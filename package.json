@@ -2,7 +2,7 @@
   "name": "sass-template",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://GreenNeptune.github.io/shop/tree/master/frontend",
+  "homepage": "https://GreenNeptune.github.io/Online-Shope-BaliProduct",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",

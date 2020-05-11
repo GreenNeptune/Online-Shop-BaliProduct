@@ -15,8 +15,8 @@ function App() {
       <Provider store={store}>
         <div className="nav">
           <ul className="nav-links-left">
-            <AutoComplete />
             <li style={{ boxShadow: '0 2rem 8rem rgba(0, 0, 0, 0.15)' }}>BaliProduct</li>
+            <AutoComplete />
             <li className="logo">
               <i className="fas fa-shopping-cart fa-3x"></i>
             </li>

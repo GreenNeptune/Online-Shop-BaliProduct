@@ -14,7 +14,8 @@ export const AutoComplete = ({ products }) => {
   console.log(filterProducts);
   return (
     <div className='auto-complete'>
-      <input value={text} onChange={onChange} type='text' placeholder='Search...' />
+      <input value={text} onChange={onChange} type='text' placeholder='Search...' /><i class="fas fa-search" style={{ position: "absolute", top: "25%", right: "2%" }}></i>
+
       {text && filterProducts.length !== 0 ? (<ul className="dropdown">
         {filterProducts.map((product, index) => <li key={index}>{product.title}</li>)}
       </ul>)
