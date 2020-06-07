@@ -1,22 +1,32 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios'
 import { connect } from 'react-redux';
+import { getProduct, fetchProducts, searchProducts } from "../../redux_store/reducers/cart/actions";
+
+export const AutoComplete = ({ products, filterProducts, getProduct, searchProducts, fetchProducts }) => {
+  const [search, setSearch] = useState('');
+
+  useEffect(() => {
+    console.log('first');
+    fetchProducts();
+
+  }, []);
 
 
-export const AutoComplete = ({ products }) => {
-  const [filterProducts, setFilterProducts] = useState(products);
-  const [text, setText] = useState('')
+
+
+
+
   const onChange = (e) => {
-    const value = e.target.value;
-    const filterByName = products.filter(product => product.title.includes(value));
-    setText(value)
-    setFilterProducts(filterByName);
+    const value = e.target.value
+    setSearch(value)
+    searchProducts(products, search)
   }
-  console.log(filterProducts);
   return (
     <div className='auto-complete'>
-      <input value={text} onChange={onChange} type='text' placeholder='Search...' /><i class="fas fa-search" style={{ position: "absolute", top: "25%", right: "2%" }}></i>
+      <input onChange={onChange} type='text' placeholder='Search...' /><i className="fas fa-search" style={{ position: "absolute", top: "25%", right: "5%" }}></i>
 
-      {text && filterProducts.length !== 0 ? (<ul className="dropdown">
+      {search && filterProducts.length !== 0 ? (<ul className="dropdown">
         {filterProducts.map((product, index) => <li key={index}>{product.title}</li>)}
       </ul>)
         : ""}
@@ -24,9 +34,22 @@ export const AutoComplete = ({ products }) => {
   )
 }
 
+
 const mapStateToProps = (state) => ({
   products: state.cart.products,
-});
+  filterProducts: state.cart.filterProducts
+})
 
 
-export default connect(mapStateToProps, null)(AutoComplete);
+
+
+const mapDispatchToProps = {
+  getProduct,
+  fetchProducts,
+  searchProducts,
+
+
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(AutoComplete);

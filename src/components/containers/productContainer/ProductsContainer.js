@@ -1,19 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
 import { connect } from "react-redux";
 import ProductItem from '../../ProductItem';
-import { addProduct } from '../../../redux_store/reducers/user/actions';
+import { fetchProducts } from '../../../redux_store/reducers/cart/actions';
+import axios from 'axios';
 
-ProductsContainer.propTypes = {
-  products: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-    quantity: PropTypes.number.isRequired
-  })).isRequired,
-};
+
 
 function ProductsContainer({ products, addProduct }) {
+
+  useEffect(() => {
+    fetchProducts();
+
+  }, []);
+
   return (
     <div className="products container">
       {products.map(product => (<ProductItem key={product.id} product={product} addProduct={addProduct} />))}
@@ -21,15 +20,15 @@ function ProductsContainer({ products, addProduct }) {
   );
 }
 
-const mapStateToProps = (state) => ({
-  products: state.cart.products,
-});
 
 
 const mapDispatchToProps = {
-  addProduct,
+  fetchProducts,
 }
 
-
+const mapStateToProps = (state) => ({
+  products: state.cart.products,
+  filterProducts: state.cart.filterProducts
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductsContainer);

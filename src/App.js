@@ -22,7 +22,7 @@ function App() {
             </li>
           </ul>
         </div>
-        <CartContainer />
+        {/* <CartContainer /> */}
         <ProductsContainer />
       </Provider>
     </div >
