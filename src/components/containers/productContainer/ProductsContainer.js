@@ -6,7 +6,7 @@ import axios from 'axios';
 
 
 
-function ProductsContainer({ products, addProduct }) {
+function ProductsContainer({ products, addProduct, filterProducts }) {
 
   useEffect(() => {
     fetchProducts();
@@ -15,7 +15,7 @@ function ProductsContainer({ products, addProduct }) {
 
   return (
     <div className="products container">
-      {products.map(product => (<ProductItem key={product.id} product={product} addProduct={addProduct} />))}
+      {filterProducts.map(product => (<ProductItem key={product.id} product={product} addProduct={addProduct} />))}
     </div>
   );
 }

@@ -7,7 +7,6 @@ export const AutoComplete = ({ products, filterProducts, getProduct, searchProdu
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    console.log('first');
     fetchProducts();
 
   }, []);
@@ -24,12 +23,12 @@ export const AutoComplete = ({ products, filterProducts, getProduct, searchProdu
   }
   return (
     <div className='auto-complete'>
-      <input onChange={onChange} type='text' placeholder='Search...' /><i className="fas fa-search" style={{ position: "absolute", top: "25%", right: "5%" }}></i>
+      <input onChange={onChange} type='text' placeholder='Search...' /><i className="fas fa-search" onClick={getProduct} style={{ position: "absolute", top: "25%", right: "5%" }}></i>
 
-      {search && filterProducts.length !== 0 ? (<ul className="dropdown">
-        {filterProducts.map((product, index) => <li key={index}>{product.title}</li>)}
+      {/* {search && filterProducts.length !== 0 ? (<ul className="dropdown">
+        {filterProducts.map((product, index) => <li key={index} onClick={getProduct}>{product.title}</li>)}
       </ul>)
-        : ""}
+        : ""} */}
     </div>
   )
 }
