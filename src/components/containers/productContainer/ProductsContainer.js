@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { connect } from "react-redux";
 import ProductItem from '../../ProductItem';
 import { fetchProducts } from '../../../redux_store/reducers/cart/actions';
-import axios from 'axios';
 
 
 
@@ -27,7 +26,7 @@ const mapDispatchToProps = {
 }
 
 const mapStateToProps = (state) => ({
-  products: state.cart.products,
+  products: state.cart.visibleProducts
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductsContainer);
