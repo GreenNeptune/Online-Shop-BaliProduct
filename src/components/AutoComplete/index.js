@@ -36,7 +36,6 @@ export const AutoComplete = ({ products, filterProducts, getProduct, searchProdu
 
 const mapStateToProps = (state) => ({
   products: state.cart.products,
-  filterProducts: state.cart.filterProducts
 })
 
 

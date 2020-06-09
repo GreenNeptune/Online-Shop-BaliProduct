@@ -7,11 +7,9 @@ const initialState = {
 export default function (state = initialState, action) {
   switch (action.type) {
     case FETCH_PRODUCTS:
-      console.log(action.payload);
-      return { ...state, products: action.payload, filterProducts: action.payload }
+      return { ...state, products: action.payload }
     case FILTER_PRODUCTS_BY_TITLE:
-      console.log('filter products');
-      return { ...state, filterProducts: action.payload }
+      return { ...state, products: action.payload }
     case GET_PRODUCT:
     // return { ...state, products: [action.payload] };
     default:

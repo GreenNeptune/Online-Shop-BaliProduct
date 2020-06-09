@@ -10,7 +10,6 @@ export const getProduct = (product) => {
 }
 
 export const searchProducts = (products, search) => {
-  console.log('products', products);
   const filteredProducts = products.filter(product => {
     const productTitle = product.title.toLowerCase();
     return productTitle.includes(search.toLowerCase())
@@ -22,9 +21,6 @@ export const searchProducts = (products, search) => {
   }
 }
 export const fetchProducts = () => async dispatch => {
-
-
-  console.log('fetch products');
   const res = await axios('https://bali-product-server.herokuapp.com/api/products');
   const products = res.data;
   dispatch({

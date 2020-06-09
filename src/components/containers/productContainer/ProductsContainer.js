@@ -6,7 +6,7 @@ import axios from 'axios';
 
 
 
-function ProductsContainer({ products, addProduct, filterProducts }) {
+function ProductsContainer({ products, addProduct }) {
 
   useEffect(() => {
     fetchProducts();
@@ -15,7 +15,7 @@ function ProductsContainer({ products, addProduct, filterProducts }) {
 
   return (
     <div className="products container">
-      {filterProducts.map(product => (<ProductItem key={product.id} product={product} addProduct={addProduct} />))}
+      {products.map(product => (<ProductItem key={product.id} product={product} addProduct={addProduct} />))}
     </div>
   );
 }
@@ -28,7 +28,6 @@ const mapDispatchToProps = {
 
 const mapStateToProps = (state) => ({
   products: state.cart.products,
-  filterProducts: state.cart.filterProducts
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductsContainer);
