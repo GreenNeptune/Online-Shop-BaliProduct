@@ -1,11 +1,11 @@
 import React from 'react';
 import './styles/App.scss';
-import ProductsContainer from './components/containers/productContainer/ProductsContainer';
 
 // Redux 
 import store from '../src/redux_store'
 import { Provider } from 'react-redux';
 import CartContainer from './components/containers/CartContainer';
+import ProductsContainer from './components/containers/ProductsContainer';
 import AutoComplete from './components/AutoComplete';
 
 
@@ -22,7 +22,7 @@ function App() {
             </li>
           </ul>
         </div>
-        {/* <CartContainer /> */}
+        <CartContainer />
         <ProductsContainer />
       </Provider>
     </div >

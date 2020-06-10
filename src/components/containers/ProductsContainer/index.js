@@ -7,7 +7,6 @@ import ProductList from '../../ProductList'
 function ProductsContainer({ products, addProduct }) {
   useEffect(() => {
     fetchProducts();
-
   }, []);
 
   return (
