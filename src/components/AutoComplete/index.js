@@ -1,25 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios'
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { fetchProducts, filterProductsByTitle } from "../../redux_store/reducers/products/actions";
+import { filterProductsByTitle } from "../../redux_store/reducers/products/actions";
 
-export const AutoComplete = ({ filterProductsByTitle, fetchProducts }) => {
+export const AutoComplete = ({ filterProductsByTitle }) => {
   const [search, setSearch] = useState('');
-
-  useEffect(() => {
-    fetchProducts();
-
-  }, []);
-
 
   const onChange = (e) => {
     const value = e.target.value
     setSearch(value)
     filterProductsByTitle(value);
   }
+
   return (
     <div className='auto-complete'>
-      <input onChange={onChange} type='text'
+      <input onChange={onChange} type='text' value={search}
         placeholder='Search...' />
       <i className="fas fa-search"
         style={{ position: "absolute", top: "25%", right: "5%" }}>
@@ -31,7 +25,6 @@ export const AutoComplete = ({ filterProductsByTitle, fetchProducts }) => {
 
 
 const mapDispatchToProps = {
-  fetchProducts,
   filterProductsByTitle,
 }
 
