@@ -1,6 +1,5 @@
-import { GET_PRODUCT, FETCH_PRODUCTS, FILTER_PRODUCTS_BY_TITLE } from "./actionType";
+import { FETCH_PRODUCTS, FILTER_PRODUCTS_BY_TITLE } from "./actionType";
 import axios from 'axios';
-
 
 
 export const fetchProducts = () => async dispatch => {
@@ -16,13 +15,5 @@ export const filterProductsByTitle = (text) => {
   return {
     type: FILTER_PRODUCTS_BY_TITLE,
     payload: text
-  }
-}
-
-
-export const getProduct = (product) => {
-  return {
-    type: GET_PRODUCT,
-    payload: product
   }
 }

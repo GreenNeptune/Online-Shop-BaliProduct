@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from "react-redux";
 import ProductItem from '../../ProductItem';
 import { fetchProducts } from '../../../redux_store/reducers/cart/actions';
 
 
-
 function ProductsContainer({ products, addProduct }) {
-
   useEffect(() => {
     fetchProducts();
 
@@ -19,14 +17,12 @@ function ProductsContainer({ products, addProduct }) {
   );
 }
 
-
-
 const mapDispatchToProps = {
   fetchProducts,
 }
 
 const mapStateToProps = (state) => ({
-  products: state.cart.visibleProducts
+  products: state.products.visibleProducts
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductsContainer);
