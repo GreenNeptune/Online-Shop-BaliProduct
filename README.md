@@ -11,4 +11,4 @@ npm install
 npm start
 ```
 
-[BaliProduct](https://GreenNeptune.github.io/Online-Shope-BaliProduct)
+[BaliProduct](https://baliproduct.herokuapp.com/)
