@@ -1,9 +1,9 @@
-import { ADD_PRODUCT } from "./actionTypes"
+import { ADD_PRODUCT_TO_CART } from "./actionTypes"
 
 
-export const addProduct = product => {
+export const addProductToCart = product => {
   return {
-    type: ADD_PRODUCT,
+    type: ADD_PRODUCT_TO_CART,
     payload: product
   }
 } 

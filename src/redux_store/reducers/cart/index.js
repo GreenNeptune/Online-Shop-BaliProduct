@@ -1,4 +1,4 @@
-import { ADD_PRODUCT } from "./actionTypes";
+import { ADD_PRODUCT_TO_CART } from "./actionTypes";
 
 
 const initialState = {
@@ -7,11 +7,10 @@ const initialState = {
 
 export default function (state = initialState, action) {
   switch (action.type) {
-    case ADD_PRODUCT:
-      const { products } = state
+    case ADD_PRODUCT_TO_CART:
       return {
         ...state,
-        products: [...products, action.payload]
+        products: [...state.products, action.payload]
       }
     default:
       return state
