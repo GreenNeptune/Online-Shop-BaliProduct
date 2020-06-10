@@ -11,7 +11,6 @@ export default function (state = initialState, action) {
       return { ...state, products: action.payload, visibleProducts: action.payload }
     case FILTER_PRODUCTS_BY_TITLE:
       const filterProductsByTitle = filteredProducts(state.products, action.payload);
-      console.log(filterProductsByTitle);
       return {
         ...state,
         visibleProducts: filterProductsByTitle,
