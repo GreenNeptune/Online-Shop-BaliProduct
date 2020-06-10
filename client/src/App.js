@@ -28,7 +28,6 @@ function App() {
                   <i className="fas fa-shopping-cart fa-3x"></i>
                 </li>
               </Link>
-
             </ul>
           </div>
           <Switch >
