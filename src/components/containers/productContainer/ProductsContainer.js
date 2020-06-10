@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from "react-redux";
-import ProductItem from '../../ProductItem';
-import { fetchProducts } from '../../../redux_store/reducers/cart/actions';
+import { fetchProducts } from '../../../redux_store/reducers/products/actions';
+import ProductList from '../../ProductList'
 
 
 function ProductsContainer({ products, addProduct }) {
@@ -12,7 +12,7 @@ function ProductsContainer({ products, addProduct }) {
 
   return (
     <div className="products container">
-      {products.map(product => (<ProductItem key={product.id} product={product} addProduct={addProduct} />))}
+      < ProductList products={products} addProduct={addProduct} />
     </div>
   );
 }
