@@ -1,15 +1,14 @@
 import React from 'react';
 import { connect } from "react-redux";
+import getProductsTotalPrice from "../../../utils/getProductsTotalPrice";
 
 export function CartContainer({ products }) {
-  const checkout = products.reduce((prev, product) => {
-    return prev + product.price;
-  }, 0).toFixed(2);
+  const cart_total = getProductsTotalPrice(products).toFixed(2);
 
   return (
     <div style={{ textAlign: "center" }} className="cart container">
-      <p className='checkout'>{checkout}$</p>
-      <button> Checkout</button>
+      <p className='cart_total'>{cart_total}$</p>
+      <button className='btn_checkout'> Checkout</button>
     </div>
   );
 }
