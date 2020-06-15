@@ -1,0 +1,11 @@
+.card_description {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7% 0 2% 0;
+
+  p {
+    margin: 0;
+  }
+}
