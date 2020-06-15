@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from "react-redux";
 import { addProductToCart } from '../../../redux_store/reducers/cart/actions';
 
+
 export function CartContainer({ products, addProductToCart, cartTotal }) {
 
 
@@ -15,10 +16,14 @@ export function CartContainer({ products, addProductToCart, cartTotal }) {
               <img src={product.img} alt={product.title} />
 
             </div>
-            <div className="cart_product_price">price: ${product.price}</div>
-            <div className="cart_product_count">count : {product.count}</div>
-            <div className="btn_product_count--increase" onClick={() => addProductToCart(product)}>↑</div>
-            <div className="btn_product_count--decrease">↓</div>
+            <div className="cart_product_description">
+              <div className="cart_product_price">price: ${product.price}</div>
+              <div className="cart_product_count">count : {product.count}</div>
+              <div className="btn_product_count_wrapper">
+                <div className="btn_product_count--increase" onClick={() => addProductToCart(product)}>↑</div>
+                <div className="btn_product_count--decrease">↓</div>
+              </div>
+            </div>
 
           </div>
         ))}

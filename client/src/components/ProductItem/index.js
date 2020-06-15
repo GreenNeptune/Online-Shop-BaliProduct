@@ -13,7 +13,7 @@ ProductItem.propTypes = {
 
 function ProductItem({ product, addProduct }) {
   return (
-    <div className="product_wrapper">
+    <div className="product_wrapper" style={{ background: "white" }}>
       < Product
         title={product.title}
         price={product.price}

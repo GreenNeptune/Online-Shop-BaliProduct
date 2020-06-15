@@ -4,9 +4,7 @@ import PropTypes from 'prop-types'
 function Product({ title, price, quantity, img }) {
   return (
     <Fragment>
-      <div className="product_img">
-        <img src={img} alt="" />
-      </div>
+      <img className="product_img" src={img} alt="" />
       <div className="product_description">
 
         <p className="product_title">{title}</p>
