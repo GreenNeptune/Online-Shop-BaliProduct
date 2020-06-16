@@ -4,7 +4,6 @@ import './productsCardGallery.scss'
 function ProductCardsGallery({ products }) {
   return (
     <div className="wrapper">
-
       <div className="products_card_gallery ">
         {products.map(product =>
           <ProductCard

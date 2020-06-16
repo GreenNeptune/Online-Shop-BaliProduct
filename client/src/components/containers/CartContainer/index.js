@@ -4,9 +4,6 @@ import { addProductToCart } from '../../../redux_store/reducers/cart/actions';
 
 
 export function CartContainer({ products, addProductToCart, cartTotal }) {
-
-
-
   return (
     <div className="cart container">
       <div className="cart_products">
@@ -14,7 +11,6 @@ export function CartContainer({ products, addProductToCart, cartTotal }) {
           <div key={product.id} className="cart_product">
             <div className="cart_product_img">
               <img src={product.img} alt={product.title} />
-
             </div>
             <div className="cart_product_description">
               <div className="cart_product_price">price: ${product.price}</div>
@@ -24,7 +20,6 @@ export function CartContainer({ products, addProductToCart, cartTotal }) {
                 <div className="btn_product_count--decrease">↓</div>
               </div>
             </div>
-
           </div>
         ))}
       </div>
