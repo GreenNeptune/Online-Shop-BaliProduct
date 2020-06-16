@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/scss/bootstrap.scss';
-// import './styles/App.scss';
+import './styles/App.scss';
 
 // Redux 
 import store from '../src/redux_store'

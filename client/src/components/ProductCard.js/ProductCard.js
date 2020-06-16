@@ -5,7 +5,7 @@ import './productCard.scss';
 function ProductCard({ title, price, quantity, imgUrl, addProduct }) {
   return (
     <Card>
-      <Card.Img variant="top" src={imgUrl} />
+      <Card.Img height="250px" variant="top" src={imgUrl} />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <div className="card_description ">

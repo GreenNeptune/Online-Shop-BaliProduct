@@ -6,14 +6,13 @@ import Spinner from '../../Spinner';
 import AutoComplete from '../../AutoComplete';
 import ProductCardsGallery from '../../ProductCardsGallery/ProductsGallery';
 
-
 function ProductsContainer({ products: { visibleProducts, loading }, fetchProducts, addProductToCart, filterProductsByTitle }) {
   useEffect(() => {
     fetchProducts();
   }, [fetchProducts]);
 
   return (loading ? (<Spinner />) : (
-    <div className="products container">
+    <div className="products">
       < AutoComplete filterProductsByTitle={filterProductsByTitle} />
       <ProductCardsGallery products={visibleProducts} addProduct={addProductToCart} />
     </div >
