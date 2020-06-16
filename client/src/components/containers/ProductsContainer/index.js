@@ -7,6 +7,7 @@ import AutoComplete from '../../AutoComplete';
 import ProductCardsGallery from '../../ProductCardsGallery/ProductsGallery';
 
 function ProductsContainer({ products: { visibleProducts, loading }, fetchProducts, addProductToCart, filterProductsByTitle }) {
+
   useEffect(() => {
     fetchProducts();
   }, [fetchProducts]);

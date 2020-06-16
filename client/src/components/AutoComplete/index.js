@@ -4,6 +4,8 @@ import './autoComplete.scss';
 const AutoComplete = ({ filterProductsByTitle }) => {
   const [search, setSearch] = useState('');
   const [onSearch, setOnSearch] = useState(false);
+
+
   const onChange = (e) => {
     const value = e.target.value
     setSearch(value)
