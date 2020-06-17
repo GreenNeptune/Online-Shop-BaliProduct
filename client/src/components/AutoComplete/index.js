@@ -8,13 +8,9 @@ const AutoComplete = ({ filterProductsByTitle }) => {
 
   const onChange = (e) => {
     const value = e.target.value
-    setSearch(value)
-    if (value !== '') {
-      setOnSearch(true);
-      filterProductsByTitle(value);
-    } else {
-      setOnSearch(false);
-    }
+    setOnSearch(value)
+    setSearch(value);
+    filterProductsByTitle(value);
   }
 
   return (

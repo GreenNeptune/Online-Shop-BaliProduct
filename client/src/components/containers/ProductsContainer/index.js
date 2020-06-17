@@ -4,7 +4,7 @@ import { fetchProducts, filterProductsByTitle } from '../../../redux_store/reduc
 import { addProductToCart } from "../../../redux_store/reducers/cart/actions";
 import Spinner from '../../Spinner';
 import AutoComplete from '../../AutoComplete';
-import ProductCardsGallery from '../../ProductCardsGallery/ProductsGallery';
+import ProductCardsGallery from '../../ProductCardsGallery/';
 
 function ProductsContainer({ products: { visibleProducts, loading }, fetchProducts, addProductToCart, filterProductsByTitle }) {
 
