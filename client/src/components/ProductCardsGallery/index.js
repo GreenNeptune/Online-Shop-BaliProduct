@@ -8,11 +8,8 @@ function ProductCardsGallery({ products, addProduct }) {
       <div className="products_card_gallery ">
         {products.map(product =>
           <ProductCard
-            key={product.title}
-            title={product.title}
-            price={product.price}
-            quantity={product.quantity}
-            imgUrl={product.img}
+            key={product.id}
+            product={product}
             addProduct={addProduct}
           />
         )}
