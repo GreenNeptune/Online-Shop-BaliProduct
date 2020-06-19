@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 import { addProductToCart } from '../../../redux_store/reducers/cart/actions';
+import './cartContainer.scss';
 
 export function CartContainer({ products, addProductToCart, cartTotal }) {
   return (
