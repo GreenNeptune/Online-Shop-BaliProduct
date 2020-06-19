@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 
-
-function Product({ title, price, quantity, img }) {
+function Product({ title, price, img }) {
   return (
     <Fragment>
       <img className="product_img" src={img} alt="" />
