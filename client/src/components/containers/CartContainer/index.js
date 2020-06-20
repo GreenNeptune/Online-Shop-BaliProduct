@@ -15,16 +15,17 @@ export function CartContainer({ products, addProductToCart, cartTotal }) {
             <div className="cart_product_description">
               <div className="cart_product_price">price: ${product.price}</div>
               <div className="cart_product_count">count : {product.count}</div>
-              <div className="btn_product_count_wrapper">
-                <div className="btn_product_count--increase" onClick={() => addProductToCart(product)}>↑</div>
-                <div className="btn_product_count--decrease">↓</div>
+              <div className="btn-common btn_product_count_wrapper">
+                <button className="btn btn-success btn_product_count--increase" onClick={() => addProductToCart(product)}>+</button>
+                <button className="btn btn-danger btn_product_count--decrease">-</button>
+                <button className="btn btn_product_count--remove">remove</button>
               </div>
             </div>
           </div>
         ))}
       </div>
       <p className='cart_total'>total : ${cartTotal}</p>
-      <button className='btn_checkout'> Checkout</button>
+      <button type="button" className='btn btn-primary btn_checkout'> Checkout</button>
     </div>
   );
 }
