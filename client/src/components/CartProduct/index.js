@@ -4,7 +4,7 @@ import './cartProduct.scss'
 function CartProduct({ product, updateProductQuantity, removeProductFromCart }) {
 
   const MAX_QUANTITY_SELECT = 10;
-  const validateQuantityInputRegex = /[1-9]/g;
+  const validateQuantityInputRegex = /[1-9][0-9]?[0-9]?/g;
   const [showQuantitySelect, setShowQuantitySelect] = useState(true);
   const [quantityInput, setQuantityInput] = useState('1');
 
