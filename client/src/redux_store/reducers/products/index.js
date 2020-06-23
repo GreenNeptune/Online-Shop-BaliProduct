@@ -1,4 +1,4 @@
-import { FETCH_PRODUCTS, FILTER_PRODUCTS_BY_TITLE } from "./actionType";
+import { GET_PRODUCTS, FILTER_PRODUCTS_BY_TITLE } from "./actionType";
 import { filteredProducts } from "../../../utils/filter";
 const initialState = {
   products: [],
@@ -8,7 +8,7 @@ const initialState = {
 
 export default function (state = initialState, action) {
   switch (action.type) {
-    case FETCH_PRODUCTS:
+    case GET_PRODUCTS:
       return { ...state, products: action.payload, visibleProducts: action.payload, loading: false }
     case FILTER_PRODUCTS_BY_TITLE:
       const filterProductsByTitle = filteredProducts(state.products, action.payload);
