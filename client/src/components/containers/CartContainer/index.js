@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from "react-redux";
 import { getCartTotal } from '../../../redux_store/reducers/cart/cart.utils';
+import { removeProductFromCart, updateProductQuantity } from '../../../redux_store/reducers/cart/actions';
+import CartProduct from '../../CartProduct';
 import './cartContainer.scss';
 
 export function CartContainer({ products, removeProductFromCart, updateProductQuantity }) {
