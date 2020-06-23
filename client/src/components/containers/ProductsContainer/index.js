@@ -1,27 +1,27 @@
 import React, { useEffect } from 'react';
 import { connect } from "react-redux";
-import { fetchProducts, filterProductsByTitle } from '../../../redux_store/reducers/products/actions';
+import { getProducts, filterProductsByTitle } from '../../../redux_store/reducers/products/actions';
 import { addProductToCart } from "../../../redux_store/reducers/cart/actions";
 import Spinner from '../../Spinner';
 import AutoComplete from '../../AutoComplete';
 import ProductCardsGallery from '../../ProductCardsGallery/';
 
-function ProductsContainer({ products: { visibleProducts, loading }, fetchProducts, addProductToCart, filterProductsByTitle }) {
+function ProductsContainer({ products: { visibleProducts, loading }, getProducts, addProductToCart, filterProductsByTitle }) {
 
   useEffect(() => {
-    fetchProducts();
-  }, [fetchProducts]);
+    getProducts();
+  }, [getProducts]);
 
   return (loading ? (<Spinner />) : (
     <div className="products">
       < AutoComplete filterProductsByTitle={filterProductsByTitle} />
-      <ProductCardsGallery products={visibleProducts} addProduct={addProductToCart} />
+      <ProductCardsGallery products={visibleProducts} addProductToCart={addProductToCart} />
     </div >
   ));
 }
 
 const mapDispatchToProps = {
-  fetchProducts,
+  getProducts,
   addProductToCart,
   filterProductsByTitle,
 }
