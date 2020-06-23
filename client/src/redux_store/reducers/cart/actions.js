@@ -1,9 +1,8 @@
 import { ADD_PRODUCT_TO_CART } from "./actionTypes"
 
-
-export const addProductToCart = product => {
-  return {
+export const addProductToCart = product => dispatch => {
+  dispatch({
     type: ADD_PRODUCT_TO_CART,
     payload: product
-  }
-} 
+  });
+}
