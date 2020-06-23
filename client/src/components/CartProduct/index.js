@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button } from "react-bootstrap";
+import './cartProduct.scss'
 function CartProduct({ product, updateProductQuantity, removeProductFromCart }) {
 
   const MAX_QUANTITY_SELECT = 10;
@@ -62,11 +63,11 @@ function CartProduct({ product, updateProductQuantity, removeProductFromCart }) 
           {showQuantitySelect ? (
             <Form.Control
               as="select"
-              className="my-1 mr-sm-2"
               id="inlineFormCustomSelectPref"
               custom
               value={quantityInput}
               onChange={onChangeProductQuantity}
+              className="mt-4 mt-sm-5"
             >
               <option value="0">Delete</option>
               <option value="1">1</option>
@@ -80,7 +81,7 @@ function CartProduct({ product, updateProductQuantity, removeProductFromCart }) 
               <option value="9">9</option>
               <option value="10">+10</option>
             </Form.Control>) :
-            (<Form.Group controlId="formBasicEmail">
+            (<Form.Group controlId="formBasicEmail" className="form_input_cart_product_quantity mt-4 mt-sm-5">
               <Form.Control
                 type="text"
                 value={quantityInput}
@@ -88,17 +89,18 @@ function CartProduct({ product, updateProductQuantity, removeProductFromCart }) 
                 onSubmit={onSubmit}
                 maxLength="3"
                 autoComplete="off"
+
                 onChange={onChangeQuantityInput}
+
               />
               <Button
                 type="submit"
-                className="mb-2"
               >
                 Update
             </Button>
             </Form.Group>)}
         </Form>
-        <button className="btn btn_product_count--remove" onClick={() => removeProductFromCart(product._id)} >remove</button>
+        <button className="btn btn_cart_product--remove mt-1 mt-sm-4" onClick={() => removeProductFromCart(product._id)} >remove</button>
       </div>
     </div >
   );
