@@ -11,6 +11,17 @@
     }
   }
 
+  input-group {
+    // position: static;
+    // display: grid;
+    // grid-template-columns: repeat(2, minmax(40px, 50px));
+    // align-items: center;
+    // width: 100%;
+    // .input-group-text {
+    //   padding: 0;
+    // }
+  }
+
   .form_input_cart_product_quantity {
     display: grid;
     grid-template-columns: repeat(2, minmax(40%, 1fr));

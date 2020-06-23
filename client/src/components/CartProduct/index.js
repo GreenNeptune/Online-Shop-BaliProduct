@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, InputGroup } from "react-bootstrap";
 import './cartProduct.scss'
 function CartProduct({ product, updateProductQuantity, removeProductFromCart }) {
 
@@ -61,26 +61,34 @@ function CartProduct({ product, updateProductQuantity, removeProductFromCart }) 
         <div className="cart_product_price">Price: ${product.price}</div>
         <Form onSubmit={onSubmit} >
           {showQuantitySelect ? (
-            <Form.Control
-              as="select"
-              id="inlineFormCustomSelectPref"
-              custom
-              value={quantityInput}
-              onChange={onChangeProductQuantity}
-              className="mt-4 mt-sm-5"
-            >
-              <option value="0">Delete</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">+10</option>
-            </Form.Control>) :
+            <Form.Group className="mt-2 mt-sm-5" md="4" >
+              <InputGroup>
+                <InputGroup.Prepend>
+                  <InputGroup.Text id="inputGroupPrepend">QTY:</InputGroup.Text>
+                </InputGroup.Prepend>
+                <Form.Control
+                  as="select"
+                  id="inlineFormCustomSelectPref"
+                  custom
+                  value={quantityInput}
+                  onChange={onChangeProductQuantity}
+                  aria-describedby="inputGroupPrepend"
+                >
+                  <option value="0">Delete</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">+10</option>
+                </Form.Control>
+              </InputGroup>
+            </Form.Group>
+          ) :
             (<Form.Group controlId="formBasicEmail" className="form_input_cart_product_quantity mt-4 mt-sm-5">
               <Form.Control
                 type="text"
@@ -100,7 +108,7 @@ function CartProduct({ product, updateProductQuantity, removeProductFromCart }) 
             </Button>
             </Form.Group>)}
         </Form>
-        <button className="btn btn_cart_product--remove mt-1 mt-sm-4" onClick={() => removeProductFromCart(product._id)} >remove</button>
+        <button className="btn btn_cart_product--remove mt-sm-3" onClick={() => removeProductFromCart(product._id)} >remove</button>
       </div>
     </div >
   );
