@@ -1,32 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from "react-redux";
-import { addProductToCart } from '../../../redux_store/reducers/cart/actions';
+import { getCartTotal } from '../../../redux_store/reducers/cart/cart.utils';
 import './cartContainer.scss';
 
-export function CartContainer({ products, addProductToCart, cartTotal }) {
+export function CartContainer({ products, removeProductFromCart, updateProductQuantity }) {
+  const [total, setTotal] = useState(0)
+
+  useEffect(() => {
+    setTotal(getCartTotal(products))
+    return () => {
+    }
+  }, [setTotal, products]);
+
   return (
     <div className="cart container">
       <div className="cart_products">
-        {products.map(product => (
-          <div key={product.id} className="cart_product">
-            <div className="cart_product_img">
-              <img src={product.img} alt={product.title} />
-            </div>
-            <div className="cart_product_description">
-              <div className="cart_product_price">price: ${product.price}</div>
-              <div className="cart_product_count">count : {product.count}</div>
-              <div className="btn-common btn_product_count_wrapper">
-                <button className="btn btn-success btn_product_count--increase" onClick={() => addProductToCart(product)}>+</button>
-                <button className="btn btn-danger btn_product_count--decrease">-</button>
-                <button className="btn btn_product_count--remove">remove</button>
-              </div>
-            </div>
-          </div>
-        ))}
+        {products.map((product, index) => (
+          <CartProduct
+            key={index}
+            product={product}
+            updateProductQuantity={updateProductQuantity}
+            removeProductFromCart={removeProductFromCart}
+          />))}
       </div>
-      <p className='cart_total'>total : ${cartTotal}</p>
+      <p className='cart_total'>total : ${total.toFixed(2)}</p>
       <button type="button" className='btn btn-primary btn_checkout'> Checkout</button>
-    </div>
+    </div >
   );
 }
 
@@ -37,7 +36,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = {
-  addProductToCart,
+  removeProductFromCart,
+  updateProductQuantity,
 }
 
 
