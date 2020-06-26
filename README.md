@@ -4,10 +4,17 @@ Online Shop App
 
 ## Features
 
-- Add Products to a cart
-- Remove items from cart
+- Add products to a cart
+- Remove products from cart
 - Edit products quantity in cart
 - Calculate automatically cart total
+
+## Stack
+
+- React
+- Redux
+- Bootstrap
+- Node.js
 
 ### Start
 
