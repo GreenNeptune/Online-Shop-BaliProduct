@@ -1,10 +1,15 @@
-# Online Shop BaliProduct
-
 ## Description
 
-Online Shop
+Online Shop App
 
-## Installation
+## Features
+
+- Add Products to a cart
+- Remove items from cart
+- Edit products quantity in cart
+- Calculate automatically cart total
+
+### Start
 
 ```sh
 npm install
