@@ -16,11 +16,4 @@ Online Shop App
 - Bootstrap
 - Node.js
 
-### Start
-
-```sh
-npm install
-npm start
-```
-
 [BaliProduct](https://baliproduct.herokuapp.com/)
