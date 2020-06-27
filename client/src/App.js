@@ -11,6 +11,7 @@ import ProductsContainer from './components/containers/ProductsContainer';
 // router 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PrivateRoute from './components/routing/PrivateRoute';
+import NotFound from './components/NotFound';
 import Menu from './components/Menu';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Switch >
             < Route exact path='/' component={ProductsContainer} />
             < PrivateRoute exact path='/cart' component={CartContainer} />
+            < Route exact component={NotFound} />
           </Switch>
         </Router>
       </Provider>
